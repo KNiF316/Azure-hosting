@@ -25,7 +25,7 @@ TEMPLATE_DIR = BASE_DIR/'templates'
 SECRET_KEY = 'django-insecure--7=r=pu&w$0i8bmuh326lovj(qu+)ah_2&-po&rzoqwb5@=&0+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -44,7 +44,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -121,8 +120,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-STATIC_ROOT = BASE_DIR / "staticfiles"
 
 
 
